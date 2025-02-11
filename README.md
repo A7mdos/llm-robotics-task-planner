@@ -1,3 +1,3 @@
 # robotics-demo
 
-Robotics on webot
+Simulation using the Franka Emika Panda robot on Webot
