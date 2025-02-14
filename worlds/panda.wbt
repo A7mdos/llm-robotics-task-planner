@@ -3,19 +3,13 @@
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/Floor.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/BakelitePlastic.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/factory/tools/protos/Screwdriver.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Plaster.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/factory/tools/protos/PaintBucket.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/tables/protos/Table.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/BrushedAluminium.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Parquetry.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/factory/tools/protos/Bolt.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/factory/tools/protos/Nut.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/solids/protos/SolidBox.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Copper.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/OldSteel.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/factory/tools/protos/Wrench.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/factory/tools/protos/Hammer.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/factory/containers/protos/PlasticCrate.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/franka_emika/panda/protos/Panda.proto"
 
@@ -27,8 +21,8 @@ WorldInfo {
   basicTimeStep 16
 }
 DEF VIEWPOINT Viewpoint {
-  orientation 0.1711140469767883 0.09916970322845792 -0.9802475977470209 2.115998515128944
-  position 0.8077549710578636 4.246020499438904 1.6622991694858031
+  orientation -0.0009831990545849847 0.0002969844616515083 -0.9999994725597853 1.9798723486315541
+  position 0.14529901093556388 3.086921627576429 0.7860125487403442
   ambientOcclusionRadius 1
 }
 TexturedBackground {
@@ -42,10 +36,6 @@ Floor {
   appearance BakelitePlastic {
     color "braun"
   }
-}
-Screwdriver {
-  translation -0.7302838294976955 3.022372170498294 0.7118828538150149
-  rotation -0.00071214768754326 0.0017192770096192693 0.9999982684646185 0.7853992243820203
 }
 DEF ROOF Pose {
   translation 0.06 5.545 3.65
@@ -62,29 +52,6 @@ DEF ROOF Pose {
       }
     }
   ]
-}
-PaintBucket {
-  hidden position_0_0 -1.0957713174744155
-  hidden rotation_1 0 -1 0 1.0957713174744155
-  hidden position_1_0 -3.2039450352309203e-07
-  hidden rotation_2 0 -1 0 3.2098083538618743e-07
-  translation -0.8573088060070995 2.4340697660635673 0.7282745776674509
-  rotation -0.6634531706884492 0.012750953010435669 0.7481091521300677 0.05385885426770613
-}
-PaintBucket {
-  hidden position_0_0 -2.0000009301632797
-  hidden linearVelocity_0 6.0387748226934996e-05 -0.00014122482335729883 0.00013494383926291773
-  hidden angularVelocity_0 0.0038544894499848606 0.0016487411250003105 -1.3850459649270026e-08
-  hidden rotation_1 0 -1 0 2.0000009301632797
-  hidden position_1_0 -3.6513857070465227e-06
-  hidden linearVelocity_1 0.00018078061246943057 -0.0004226461155929493 0.00019001867222789403
-  hidden angularVelocity_1 0.00385448703646091 0.0016487404643763801 -7.912608457673878e-09
-  hidden rotation_2 0 -1 0 3.651362246904884e-06
-  hidden linearVelocity_2 0.0001458384520421219 -0.00034096835111038906 0.0001961446319793865
-  hidden angularVelocity_2 0.0038553908785280365 0.001645367802243912 -1.2485286514360202e-08
-  translation -0.6201658517908997 2.5767343630782436 0.725640785506718
-  rotation 0.007774430399030859 -0.015646536893400478 0.9998473604081844 0.2618332063286949
-  name "paint bucket(1)"
 }
 DEF FIRE_EXTINGUISHER_PANEL Pose {
   translation 3.572 6.07451 1.98
@@ -119,140 +86,11 @@ Table {
   }
 }
 Pose {
-  translation 0.650001 2.8 0.715
-  children [
-    Bolt {
-      translation 5.16679588002944e-10 0 0.011283426195201507
-      rotation -1.5059626414165515e-16 -1 2.1926776517403928e-16 1.5707952874951085
-    }
-    Bolt {
-      translation -0.049999999483320456 0 0.011283426195232593
-      rotation -1.704295307320633e-17 -1 8.617460124471916e-17 1.5707952874951085
-      name "bolt(1)"
-    }
-    Bolt {
-      translation -0.09999999948332039 0 0.011283426195272894
-      rotation 9.391665900741372e-17 -1 -1.3681243652772122e-18 1.5707952874951085
-      name "bolt(2)"
-    }
-    Bolt {
-      translation 5.16679588002944e-10 0.04999999999999982 0.011283426195201174
-      rotation 2.469880763995503e-17 -1 7.627199771651227e-17 1.5707952874951079
-      name "bolt(3)"
-    }
-    Bolt {
-      translation -0.049999999483320456 0.04999999999999982 0.011283426195201174
-      rotation -1.4140294240221862e-16 -1 1.8956132266097266e-16 1.5707952874951088
-      name "bolt(4)"
-    }
-    Bolt {
-      translation -0.09999999948332039 0.04999999999999982 0.01128342619559608
-      rotation -1.1238233810734336e-16 -1 2.077089191573734e-16 1.5707952874951077
-      name "bolt(5)"
-    }
-    Bolt {
-      translation 0.05000000051667963 0 0.01128342619559719
-      rotation 4.724664182731397e-17 -1 1.432657819658984e-17 1.5707952874951077
-      name "bolt(6)"
-    }
-    Bolt {
-      translation 0.10000000051667957 0 0.011283426195417334
-      rotation -8.23298262730013e-17 -1 1.39219905819529e-16 1.5707952874951085
-      name "bolt(7)"
-    }
-    Bolt {
-      translation 0.1500000005166796 0 0.011283426195206503
-      rotation -1.2397970352090454e-16 -1 1.0328663645182829e-16 1.5707952874951074
-      name "bolt(8)"
-    }
-    Bolt {
-      translation 0.1500000005166796 0.04999999999999982 0.011283426195213608
-      rotation -4.572206163541736e-17 -1 2.2477882575338684e-17 1.5707952874951079
-      name "bolt(9)"
-    }
-    Bolt {
-      translation 0.10000000051667957 0.04999999999999982 0.011283426195598634
-      rotation -3.924732706686798e-17 -1 8.431514930879743e-17 1.5707952874951077
-      name "bolt(10)"
-    }
-    Bolt {
-      translation 0.05000000051667963 0.04999999999999982 0.011283426195597634
-      rotation 7.537748498831113e-17 -1 -2.4651087676384444e-17 1.5707952874951079
-      name "bolt(11)"
-    }
-  ]
-}
-Pose {
-  translation 0.660001 2.66 0.704
-  rotation 0 1 0 -1.5707953071795862
-  children [
-    Nut {
-      translation -0.0005286877023072956 0 0.011999999440101883
-      rotation 5.379828503825745e-09 0.999999999999996 8.834883436511652e-08 6.100071670012166e-09
-    }
-    Nut {
-      translation -0.0005286877021964953 0.04999999999999982 0.011999999440101883
-      rotation -5.765129514954371e-10 1 2.2352153020768005e-09 6.100070892856024e-09
-      name "nut(3)"
-    }
-    Nut {
-      translation -0.0005287386829126994 0 0.06199999944004975
-      rotation -1.5368775514121317e-09 0.9999999999999998 -1.7106918226086324e-08 6.100081217930154e-09
-      name "nut(1)"
-    }
-    Nut {
-      translation -0.0005287386830837848 0.04999999999999982 0.06199999944004975
-      rotation -5.501499686749114e-10 0.9999999999999997 2.3677690468575575e-08 6.100081773041667e-09
-      name "nut(4)"
-    }
-    Nut {
-      translation -0.000528789663919671 0 0.11199999943999783
-      rotation 3.1441285305461673e-09 0.999999999999999 4.638495714483804e-08 6.100092320160406e-09
-      name "nut(2)"
-    }
-    Nut {
-      translation -0.0005287896637825584 0.04999999999999982 0.11199999943999783
-      rotation 9.084412058280299e-10 0.9999999999999994 -3.831443390610027e-08 6.1000910989150775e-09
-      name "nut(5)"
-    }
-    Nut {
-      translation -0.0005286367216714716 0.04999999999999982 -0.03800000055984598
-      rotation 2.1361290709362282e-11 1 -9.860500211719257e-10 6.100061011871106e-09
-      name "nut(6)"
-    }
-    Nut {
-      translation -0.0005285857408638961 0.04999999999999982 -0.08800000055979385
-      rotation 2.078361740416157e-09 0.9999999999999999 -1.319137265218363e-08 6.100051241908489e-09
-      name "nut(7)"
-    }
-    Nut {
-      translation -0.0005285347603013468 0.04999999999999982 -0.13800000055974193
-      rotation 4.8645881048716085e-09 0.9999999999999977 -7.014441746905385e-08 6.1000416939904916e-09
-      name "nut(8)"
-    }
-    Nut {
-      translation -0.0005285347601060586 0 -0.13800000055974193
-      rotation -1.7327766434346526e-09 0.9999999999999948 -1.033560133611143e-07 6.100040694789787e-09
-      name "nut(9)"
-    }
-    Nut {
-      translation -0.0005285857410134431 0 -0.08800000055979385
-      rotation 3.1316632179610715e-09 1 -5.4109899362136675e-09 6.100050797819279e-09
-      name "nut(10)"
-    }
-    Nut {
-      translation -0.0005286367215973087 0 -0.03800000055984598
-      rotation -8.485178227347697e-10 0.9999999999999997 -2.5036561317477044e-08 6.100061455960317e-09
-      name "nut(11)"
-    }
-  ]
-}
-Pose {
   translation 0 2.75 -0.27
   children [
     SolidBox {
-      translation 3.5240600453689775e-18 0 0.9999344797020064
-      rotation 0.8531031890209841 0.21327579725523338 0.4761600394692642 4.1644594985954216e-17
+      translation 3.211166661812614e-17 0 0.9999344803000001
+      rotation -0.05404294267480008 -0.012970306241952721 0.9984543712674298 1.3695565904640604e-15
       size 0.03 0.03 0.06
       appearance Copper {
       }
@@ -261,37 +99,7 @@ Pose {
         mass 0.2
       }
     }
-    Pose {
-      translation 0 -0.1 0
-      children [
-        SolidBox {
-          translation 9.58004690672991e-19 0 0.9999344797020064
-          rotation 0.663720641741206 -0.11062010695687033 0.7397554336829788 1.3381811018715258e-16
-          name "box(2)"
-          size 0.03 0.03 0.06
-          appearance OldSteel {
-          }
-          physics Physics {
-            density -1
-            mass 0.2
-          }
-        }
-      ]
-    }
   ]
-}
-Wrench {
-  translation 0.6950000205488103 2.3274199649927105 0.6989193277804131
-  rotation -4.972091363252017e-05 -1.9613152258300687e-05 0.9999999985715774 0.7854053045032842
-}
-Wrench {
-  translation 0.6739710323751951 2.462449975419015 0.6989193277804133
-  rotation -2.7000005716833615e-05 -1.9998923130010937e-05 0.9999999994355213 1.308999996294655
-  name "wrench(1)"
-}
-Hammer {
-  translation -0.5167492563842169 2.985002537869846 0.7125671366313137
-  rotation 0.005221097476396437 -0.0036328698048132225 0.9999797709944552 -2.0864826582053784
 }
 DEF WINDOW_DOOR_BLOCK Pose {
   translation 3.575 5.218 0
@@ -422,24 +230,23 @@ DEF WINDOW_DOOR_BLOCK Pose {
   ]
 }
 Panda {
-  hidden translation_1 -1.4578752223215474e-06 -4.454819083039284e-08 -0.00013815919264359433
-  hidden rotation_1 -0.03037367458988268 0.9995386134779793 -7.643737163696289e-06 2.9186448836335192e-05
-  hidden position_1_0 2.3856832507546353e-05
-  hidden rotation_2 0 0 1 2.385682887695403e-05
-  hidden position_2_0 2.950577291577001e-05
-  hidden rotation_3 -0.9999999997823523 1.475289127691318e-05 1.4752886455744387e-05 1.5707960002176475
-  hidden position_3_0 -2.3715253028022687e-05
-  hidden rotation_4 0.9999999998593966 1.1857630387912325e-05 -1.1857626512899862e-05 1.5707960001406034
-  hidden position_4_0 -1.7708221961956068
-  hidden rotation_5 0.5661013207371882 0.5828933142642149 -0.5828933683322279 2.111349753814327
-  hidden position_5_0 -1.5999895960451989
-  hidden rotation_6 -0.9999999999729394 5.201979100295803e-06 5.20197740035642e-06 1.5707960000270607
-  hidden position_6_0 1.5999977010582183
-  hidden rotation_7 0.56611111431471 -0.5828886807583585 0.5828884902733434 2.111335596923591
-  hidden position_7_0 0.790000024826467
-  hidden rotation_8 0.8614190845550643 -0.35913593879156597 0.3591358214277929 1.719419952831503
-  hidden position_9_0 1.9901516763908764e-12
-  hidden position_9_1 -1.9901551170023353e-12
+  hidden translation_1 -2.9159899432862346e-06 -8.860745733946681e-08 -0.00027631843088926633
+  hidden rotation_1 -0.030375719396263417 0.9995385513681558 8.953374796936084e-08 5.837571923782916e-05
+  hidden position_1_0 5.228875892797499e-09
+  hidden position_2_0 5.9014261654595764e-05
+  hidden rotation_3 -0.9999999991293289 2.950714045295188e-05 2.9507130810170544e-05 1.570796000870671
+  hidden position_3_0 -6.291806661201091e-09
+  hidden rotation_4 1 3.1459043586658673e-09 -3.1459033306005453e-09 1.570796
+  hidden position_4_0 -1.7708443930322633
+  hidden rotation_5 0.5660927783542072 0.582897462368554 -0.5828975164293587 2.1113626922480497
+  hidden position_5_0 -1.60000011583612
+  hidden rotation_6 -0.9999999999999967 -5.791807897647283e-08 -5.791805997835098e-08 1.5707960000000034
+  hidden position_6_0 1.5999954022197103
+  hidden rotation_7 0.5661119990155484 -0.5828882511396909 0.582888060654816 2.1113342569571394
+  hidden position_7_0 0.7900000000695914
+  hidden rotation_8 0.8614190922993883 -0.35913592950384216 0.3591358121400722 1.7194199439404196
+  hidden position_9_0 -3.325412454660284e-13
+  hidden position_9_1 2.3226935508518467e-12
   translation -2.45568e-06 2.2 0.7
   rotation 0 0 1 1.5708
   controller "panda_arm_demo"
@@ -469,10 +276,17 @@ Bolt {
   enablePhysics FALSE
 }
 PlasticCrate {
-  translation -0.75 2.53 0.72
-  rotation 0 0 1 -0.261795307179586
-  name "plastic crate(2)"
+  translation 0.827373 2.30988 0.72
+  rotation 0 0 1 -1.5707953071795862
+  name "Red crate"
   size 0.5 0.5 0.2
+}
+PlasticCrate {
+  translation -0.802627 2.30988 0.72
+  rotation 0 0 1 -1.5707953071795862
+  name "Blue crate"
+  size 0.5 0.5 0.2
+  color 0.2 0.2 0.9
 }
 Group {
 }
