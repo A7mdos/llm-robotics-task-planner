@@ -9,7 +9,6 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Parquetry.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/factory/tools/protos/Bolt.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/solids/protos/SolidBox.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Copper.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/factory/containers/protos/PlasticCrate.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/franka_emika/panda/protos/Panda.proto"
 
@@ -21,8 +20,8 @@ WorldInfo {
   basicTimeStep 16
 }
 DEF VIEWPOINT Viewpoint {
-  orientation -0.0009831990545849847 0.0002969844616515083 -0.9999994725597853 1.9798723486315541
-  position 0.14529901093556388 3.086921627576429 0.7860125487403442
+  orientation 0.33572443053720574 0.24873199590327 -0.9085271052392683 1.9606094966154566
+  position 0.6794827009904567 4.726509973483311 2.599894106517911
   ambientOcclusionRadius 1
 }
 TexturedBackground {
@@ -91,8 +90,117 @@ Pose {
     SolidBox {
       translation 3.211166661812614e-17 0 0.9999344803000001
       rotation -0.05404294267480008 -0.012970306241952721 0.9984543712674298 1.3695565904640604e-15
+      name "blue block(1)"
       size 0.03 0.03 0.06
-      appearance Copper {
+      appearance PBRAppearance {
+        baseColor 0.2 0.2 0.9
+        roughness 1
+        metalness 0
+      }
+      physics Physics {
+        density -1
+        mass 0.2
+      }
+    }
+    SolidBox {
+      translation 0.36 -0.14 0.999934
+      rotation -0.05404294267480008 -0.012970306241952721 0.9984543712674298 1.3695565904640604e-15
+      name "blue block(2)"
+      size 0.03 0.03 0.06
+      appearance PBRAppearance {
+        baseColor 0.2 0.2 0.9
+        roughness 1
+        metalness 0
+      }
+      physics Physics {
+        density -1
+        mass 0.2
+      }
+    }
+    SolidBox {
+      translation 0.39 0.2 0.999934
+      rotation -0.05404294267480008 -0.012970306241952721 0.9984543712674298 1.3695565904640604e-15
+      name "blue block(3)"
+      size 0.03 0.03 0.06
+      appearance PBRAppearance {
+        baseColor 0.2 0.2 0.9
+        roughness 1
+        metalness 0
+      }
+      physics Physics {
+        density -1
+        mass 0.2
+      }
+    }
+    SolidBox {
+      translation 0.09 0.23 0.999934
+      rotation -0.05404294267480008 -0.012970306241952721 0.9984543712674298 1.3695565904640604e-15
+      name "blue block(4)"
+      size 0.03 0.03 0.06
+      appearance PBRAppearance {
+        baseColor 0.2 0.2 0.9
+        roughness 1
+        metalness 0
+      }
+      physics Physics {
+        density -1
+        mass 0.2
+      }
+    }
+    SolidBox {
+      translation -0.26 -0.13 0.999934
+      rotation -0.05404294267480008 -0.012970306241952721 0.9984543712674298 1.3695565904640604e-15
+      name "red block(2)"
+      size 0.03 0.03 0.06
+      appearance PBRAppearance {
+        baseColor 0.9 0.2 0.2
+        roughness 1
+        metalness 0
+      }
+      physics Physics {
+        density -1
+        mass 0.2
+      }
+    }
+    SolidBox {
+      translation -0.16 0.21 0.999934
+      rotation -0.05404294267480008 -0.012970306241952721 0.9984543712674298 1.3695565904640604e-15
+      name "red block(3)"
+      size 0.03 0.03 0.06
+      appearance PBRAppearance {
+        baseColor 0.9 0.2 0.2
+        roughness 1
+        metalness 0
+      }
+      physics Physics {
+        density -1
+        mass 0.2
+      }
+    }
+    SolidBox {
+      translation 0.21 0.03 0.999934
+      rotation -0.05404294267480008 -0.012970306241952721 0.9984543712674298 1.3695565904640604e-15
+      name "red block(4)"
+      size 0.03 0.03 0.06
+      appearance PBRAppearance {
+        baseColor 0.9 0.2 0.2
+        roughness 1
+        metalness 0
+      }
+      physics Physics {
+        density -1
+        mass 0.2
+      }
+    }
+    SolidBox {
+      translation -0.36 0.1 0.999934
+      rotation -0.05404294267480008 -0.012970306241952721 0.9984543712674298 1.3695565904640604e-15
+      name "red block(5)"
+      size 0.03 0.03 0.06
+      appearance PBRAppearance {
+        baseColor 0.9 0.2 0.2
+        roughness 1
+        metalness 0
       }
       physics Physics {
         density -1
@@ -230,23 +338,24 @@ DEF WINDOW_DOOR_BLOCK Pose {
   ]
 }
 Panda {
-  hidden translation_1 -2.9159899432862346e-06 -8.860745733946681e-08 -0.00027631843088926633
-  hidden rotation_1 -0.030375719396263417 0.9995385513681558 8.953374796936084e-08 5.837571923782916e-05
-  hidden position_1_0 5.228875892797499e-09
-  hidden position_2_0 5.9014261654595764e-05
+  hidden translation_2 0 0 0.333
+  hidden rotation_2 0 0 1 0
+  hidden translation_3 0 0 0
   hidden rotation_3 -0.9999999991293289 2.950714045295188e-05 2.9507130810170544e-05 1.570796000870671
-  hidden position_3_0 -6.291806661201091e-09
+  hidden translation_4 0 -0.316 0
   hidden rotation_4 1 3.1459043586658673e-09 -3.1459033306005453e-09 1.570796
-  hidden position_4_0 -1.7708443930322633
+  hidden translation_5 0.0825 0 0
   hidden rotation_5 0.5660927783542072 0.582897462368554 -0.5828975164293587 2.1113626922480497
-  hidden position_5_0 -1.60000011583612
+  hidden translation_6 -0.0825 0.384 0
   hidden rotation_6 -0.9999999999999967 -5.791807897647283e-08 -5.791805997835098e-08 1.5707960000000034
-  hidden position_6_0 1.5999954022197103
+  hidden translation_7 0 0 0
   hidden rotation_7 0.5661119990155484 -0.5828882511396909 0.582888060654816 2.1113342569571394
-  hidden position_7_0 0.7900000000695914
+  hidden translation_8 0.088 -1.3877787807814457e-17 0
   hidden rotation_8 0.8614190922993883 -0.35913592950384216 0.3591358121400722 1.7194199439404196
-  hidden position_9_0 -3.325412454660284e-13
-  hidden position_9_1 2.3226935508518467e-12
+  hidden translation_10 0 -2.322692921856905e-12 0.0584
+  hidden rotation_10 0 0 1 0
+  hidden translation_11 0 -4.312848667854182e-12 0.0584
+  hidden rotation_11 0 0 1 0
   translation -2.45568e-06 2.2 0.7
   rotation 0 0 1 1.5708
   controller "panda_arm_demo"
