@@ -47,7 +47,7 @@ gripper_min = 0.0  # Minimum gripper closure
 gripper_max = 0.04  # Maximum open position
 
 # Define movement step size
-step_size = 0.05
+step_size = 0.005
 gripper_step = 0.005  # Adjust gripper movement speed
 
 print("🔹 Use the following keys to control the Panda arm:")
@@ -86,9 +86,6 @@ while robot.step(time_step) != -1:
     for motor in gripper_motors.values():
         motor.setPosition(gripper_position)
 
-    # 🔹 Print the current joint positions
-    print("\n🔹 Current Joint Positions (radians):")
-    for joint, position in joint_positions.items():
-        print(f"  {joint}: {position:.4f}")
-
-    print(f"  Gripper Position: {gripper_position:.4f}")
+    # 🔹 Print joint positions in a single line
+    formatted_positions = ", ".join(f"{joint_positions[joint]:.4f}" for joint in joint_bindings.keys())
+    print(formatted_positions)
