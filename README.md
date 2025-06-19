@@ -28,8 +28,8 @@ This repository implements key findings from our research titled *"Implementatio
 ### Installation
 1. Clone this repository:
    ```bash
-   git clone https://github.com/A7mdos/robotics-demo.git
-   cd robotics-demo
+   git clone https://github.com/A7mdos/llm-robotics-task-planner.git
+   cd llm-robotics-task-planner
    ```
 2. Install dependencies:
    ```bash
