@@ -1,4 +1,4 @@
-# Robotics Demo
+# LLM Robotics Task Planner
 
 ## Overview
 This repository provides a simulation of the Franka Emika Panda robot using Webots. The project is designed to explore task planning in dynamic environments, leveraging insights from our Bachelor's thesis on hybrid Large Language Model (LLM) and affordance-based robotics.
