@@ -1,0 +1,401 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/BakelitePlastic.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Plaster.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/tables/protos/Table.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/BrushedAluminium.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Parquetry.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/factory/tools/protos/Bolt.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/solids/protos/SolidBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/factory/containers/protos/PlasticCrate.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/franka_emika/panda/protos/Panda.proto"
+
+WorldInfo {
+  info [
+    "This example showcases Franka Emika's Panda robot in a factory setting."
+  ]
+  title "Panda demo"
+  basicTimeStep 16
+}
+DEF VIEWPOINT Viewpoint {
+  orientation 0.1962321649276358 0.12278674056471345 -0.972839325782684 2.0546683618953745
+  position 0.8902742482102031 3.8189597424871993 1.3312195303964316
+  ambientOcclusionRadius 1
+}
+TexturedBackground {
+  texture "factory"
+  skybox FALSE
+}
+Floor {
+  translation 0 5.6 0
+  size 6.95 11.5
+  tileSize 2 2
+  appearance BakelitePlastic {
+    color "braun"
+  }
+}
+DEF ROOF Pose {
+  translation 0.06 5.545 3.65
+  rotation 0 1 0 3.141592644
+  children [
+    Shape {
+      appearance Plaster {
+        textureTransform TextureTransform {
+          scale 5.7 5.05
+        }
+      }
+      geometry Plane {
+        size 7.2 11.36
+      }
+    }
+  ]
+}
+DEF FIRE_EXTINGUISHER_PANEL Pose {
+  translation 3.572 6.07451 1.98
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/samples/environments/factory/worlds/textures/fire_extinguisher_panel.jpg"
+          ]
+        }
+        metalness 0
+      }
+      geometry Box {
+        size 0.2 0.2 0.2
+      }
+    }
+  ]
+}
+Table {
+  translation 0 2.64217 -2.62797e-05
+  rotation 0 0 1 1.5708
+  name "table(4)"
+  size 1.2 2.2 0.7
+  feetSize 0.05 0.05
+  trayAppearance Parquetry {
+    type "light strip"
+    colorOverride 0.933333 0.933333 0.92549
+  }
+  legAppearance BrushedAluminium {
+    colorOverride 0.333 0.341 0.325
+  }
+}
+Pose {
+  translation 0 2.75 -0.27
+  children [
+    SolidBox {
+      translation 3.656268862037882e-17 0 0.9999344803000001
+      rotation -0.0032491327383025455 -0.014621097322360915 0.9998878270333823 1.8223907551900653e-15
+      name "blue block(1)"
+      size 0.03 0.03 0.06
+      appearance PBRAppearance {
+        baseColor 0.2 0.2 0.9
+        roughness 1
+        metalness 0
+      }
+      physics Physics {
+        density -1
+        mass 0.2
+      }
+    }
+    SolidBox {
+      translation 0.36075768929594654 -0.14104494077943164 0.9999344803000002
+      rotation 4.163363137794026e-17 -1.4676033803893363e-16 1 0.783847363020064
+      name "blue block(2)"
+      size 0.03 0.03 0.06
+      appearance PBRAppearance {
+        baseColor 0.2 0.2 0.9
+        roughness 1
+        metalness 0
+      }
+      physics Physics {
+        density -1
+        mass 0.2
+      }
+    }
+    SolidBox {
+      translation 0.37041669518204967 0.16458735752689435 0.9999344802999998
+      rotation 9.75913e-17 -2.25004e-17 1 1.0464
+      name "blue block(3)"
+      size 0.03 0.03 0.06
+      appearance PBRAppearance {
+        baseColor 0.2 0.2 0.9
+        roughness 1
+        metalness 0
+      }
+      physics Physics {
+        density -1
+        mass 0.2
+      }
+    }
+    SolidBox {
+      translation 0.09 0.22999999999999998 0.9999344803000001
+      rotation 4.2538270819638755e-16 -3.16698082583354e-16 -0.9999999999999999 0.2253957531479978
+      name "blue block(4)"
+      size 0.03 0.03 0.06
+      appearance PBRAppearance {
+        baseColor 0.2 0.2 0.9
+        roughness 1
+        metalness 0
+      }
+      physics Physics {
+        density -1
+        mass 0.2
+      }
+    }
+    SolidBox {
+      translation -0.26 -0.1299999999999999 0.9999344803000001
+      rotation 1.1277877697527616e-16 1.8886489816881502e-16 1 0.523599
+      name "red block(1)"
+      size 0.03 0.03 0.06
+      appearance PBRAppearance {
+        baseColor 0.9 0.2 0.2
+        roughness 1
+        metalness 0
+      }
+      physics Physics {
+        density -1
+        mass 0.2
+      }
+    }
+    SolidBox {
+      translation -0.16 0.20999999999999996 0.9999344803000002
+      rotation -3.498707258342138e-16 3.8350844013589113e-16 1 0.261799
+      name "red block(2)"
+      size 0.03 0.03 0.06
+      appearance PBRAppearance {
+        baseColor 0.9 0.2 0.2
+        roughness 1
+        metalness 0
+      }
+      physics Physics {
+        density -1
+        mass 0.2
+      }
+    }
+    SolidBox {
+      translation 0.21 0.029999999999999805 0.9999344803000002
+      rotation 3.8007104191862045e-16 2.845390001589451e-16 -1 0.261795307179586
+      name "red block(3)"
+      size 0.03 0.03 0.06
+      appearance PBRAppearance {
+        baseColor 0.9 0.2 0.2
+        roughness 1
+        metalness 0
+      }
+      physics Physics {
+        density -1
+        mass 0.2
+      }
+    }
+    SolidBox {
+      translation -0.36 0.10000000000000009 0.9999344803000001
+      rotation 2.311840461702919e-16 -1.5372409846115822e-16 1 0.523599
+      name "red block(4)"
+      size 0.03 0.03 0.06
+      appearance PBRAppearance {
+        baseColor 0.9 0.2 0.2
+        roughness 1
+        metalness 0
+      }
+      physics Physics {
+        density -1
+        mass 0.2
+      }
+    }
+  ]
+}
+DEF WINDOW_DOOR_BLOCK Pose {
+  translation 3.575 5.218 0
+  rotation 0 0 1 3.141592644
+  children [
+    Pose {
+      translation 0.1 1.85 3
+      children [
+        Shape {
+          appearance DEF WALL_JOINT_APPEARANCE PBRAppearance {
+            baseColor 0.063 0.004 0.004
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.02 5.7 0.02
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0.1 1.85 2.405
+      children [
+        Shape {
+          appearance USE WALL_JOINT_APPEARANCE
+          geometry Box {
+            size 0.02 5.7 0.01
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0.1 -0.505 1.5
+      rotation -1 0 0 1.570796322
+      children [
+        Shape {
+          appearance USE WALL_JOINT_APPEARANCE
+          geometry Box {
+            size 0.02 3 0.01
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0.1 0.495 1.5
+      rotation -1 0 0 1.570796322
+      children [
+        Shape {
+          appearance USE WALL_JOINT_APPEARANCE
+          geometry Box {
+            size 0.02 3 0.01
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0.1 -0.995 1.5
+      rotation -1 0 0 1.570796322
+      children [
+        Shape {
+          appearance USE WALL_JOINT_APPEARANCE
+          geometry Box {
+            size 0.02 3 0.01
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0.1 1.5 1.5
+      rotation -1 0 0 1.570796322
+      children [
+        Shape {
+          appearance USE WALL_JOINT_APPEARANCE
+          geometry Box {
+            size 0.02 3 0.01
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0.1 2.5 1.5
+      rotation -1 0 0 1.570796322
+      children [
+        Shape {
+          appearance USE WALL_JOINT_APPEARANCE
+          geometry Box {
+            size 0.02 3 0.01
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0.1 3.5 1.5
+      rotation -1 0 0 1.570796322
+      children [
+        Shape {
+          appearance USE WALL_JOINT_APPEARANCE
+          geometry Box {
+            size 0.02 3 0.01
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0.1 4.5 1.5
+      rotation -1 0 0 1.570796322
+      children [
+        Shape {
+          appearance USE WALL_JOINT_APPEARANCE
+          geometry Box {
+            size 0.02 3 0.01
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0.1 4.695 1.5
+      rotation -1 0 0 1.570796322
+      children [
+        Shape {
+          appearance USE WALL_JOINT_APPEARANCE
+          geometry Box {
+            size 0.02 3 0.01
+          }
+        }
+      ]
+    }
+  ]
+}
+Panda {
+  hidden translation_1 -2.915927439062216e-06 -8.910456398864612e-08 -0.00027631857603427346
+  hidden rotation_1 -0.03037350251434882 0.9995386187066966 -7.67592940289093e-06 5.83757048352237e-05
+  hidden position_1_0 4.770915590223768e-05
+  hidden rotation_2 0 0 1 4.770915276949358e-05
+  hidden position_2_0 5.9014329159458494e-05
+  hidden rotation_3 -0.9999999991293269 2.9507174205394214e-05 2.9507164562601854e-05 1.570796000870673
+  hidden position_3_0 -4.742428735937665e-05
+  hidden rotation_4 0.9999999994377342 2.3712151419808776e-05 -2.371214367079997e-05 1.5707960005622659
+  hidden position_4_0 -1.7708443930849147
+  hidden rotation_5 0.5660927783339447 0.5828974623783933 -0.582897516439198 2.11136269227874
+  hidden position_5_0 -1.5999792016479821
+  hidden rotation_6 -0.9999999998918571 1.039917940647548e-05 1.0399176008088302e-05 1.5707960001081427
+  hidden position_6_0 1.5999954022133376
+  hidden rotation_7 0.5661119990180008 -0.5828882511384997 0.582888060653625 2.111334256953425
+  hidden position_7_0 0.7900000496176823
+  hidden rotation_8 0.8614190767999981 -0.3591359480921722 0.35913583072839617 1.7194199617349197
+  hidden position_9_0 5.349313388993894e-12
+  hidden position_9_1 -3.359161295128106e-12
+  translation -2.45568e-06 2.2 0.7
+  rotation 0 0 1 1.5708
+  controller "keyboard"
+}
+Bolt {
+  translation 0.08 2.19 0.69
+  rotation 0.3574058186283875 0.8628565621288802 -0.35740681862788 1.71777
+  name "bolt(12)"
+  enablePhysics FALSE
+}
+Bolt {
+  translation -0.08 2.189 0.69
+  rotation -0.12942794302188446 -0.9831055672070398 0.12942894302144423 -1.58784
+  name "bolt(13)"
+  enablePhysics FALSE
+}
+Bolt {
+  translation 0.04 2.062 0.689
+  rotation 0.1294279597735375 -0.9831056944488314 -0.1294279597735375 -1.58784
+  name "bolt(14)"
+  enablePhysics FALSE
+}
+Bolt {
+  translation -0.04 2.0625 0.689
+  rotation 0.35740494636728165 -0.8628568705184134 -0.3574069463669815 -1.71777
+  name "bolt(15)"
+  enablePhysics FALSE
+}
+PlasticCrate {
+  translation 0.827373 2.30988 0.72
+  rotation 0 0 1 -1.5707953071795862
+  name "Red crate"
+  size 0.5 0.5 0.2
+}
+PlasticCrate {
+  translation -0.802627 2.30988 0.72
+  rotation 0 0 1 -1.5707953071795862
+  name "Blue crate"
+  size 0.5 0.5 0.2
+  color 0.2 0.2 0.9
+}
+Group {
+}

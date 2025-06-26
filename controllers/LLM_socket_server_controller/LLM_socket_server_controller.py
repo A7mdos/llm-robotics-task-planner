@@ -4,8 +4,8 @@ import socket
 
 # Constants
 TIME_STEP = 32
-OPEN_HAND = 0.05   # Increased value so the hand opens more
-CLOSE_HAND = 0.012
+OPEN_HAND = 0.04   # Increased value so the hand opens more
+CLOSE_HAND = 0.001
 
 # Device names
 JOINT_NAMES = ["panda_joint1", "panda_joint2", "panda_joint4", "panda_joint6"]
@@ -16,8 +16,8 @@ BLOCK_POSITIONS = {
     'blue': [
         [0.0, 0.5, -2.37, 2.7],         # Blue Block 1
         [-0.72, 0.48, -2.3908, 2.7],      # Blue Block 2
-        [-0.4800, 1.3600, -0.7298, 1.9200],  # Blue Block 3
-        [-0.1199, 1.2001, -1.0309, 2.0400]   # Blue Block 4
+        [-0.1199, 1.2001, -1.0309, 2.0400],  # Blue Block 4
+        [-0.4800, 1.3600, -0.7298, 1.9200]  # Blue Block 3
     ],
     'red': [
         [0.5601, 0.4001, -2.5309, 2.7000],  # Red Block 1
