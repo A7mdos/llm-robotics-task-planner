@@ -3,7 +3,7 @@ import socket
 from groq import Groq
 
 # Instantiate the client using your Groq API key.
-api_key = "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"
+api_key = "add_your_grok_api"
 client = Groq(api_key=api_key)
 
 def load_prompt_template():
